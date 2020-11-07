@@ -52,7 +52,7 @@ module.exports = function(out, options) {
 
     cb();
   }, function(cb) {
-    var buffer = (options.destRowTemplate) ? new Buffer(fileList.join('')) : new Buffer(JSON.stringify(fileList, null, '  '));
+    var buffer = new Buffer(JSON.stringify(fileList, null, '  '));
 
     var fileListFile = new File({
       path: out,
